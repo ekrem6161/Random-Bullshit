@@ -1,0 +1,90 @@
+================================================================
+ C# ALISTIRMA SETI - INDeks
+================================================================
+
+ Bu klasorde 10 alistirma var. Her biri ayri bir kons projesidir
+ ve Visual Studio ile veya terminalden calistirilabilir.
+
+ NASIL CALISTIRILIR (Visual Studio):
+   Alistirma klasorunu Visual Studio'da File > Open > Project ile
+   ac. Program.cs dosyasini doldur. F5 ile calistir.
+
+ NASIL CALISTIRILIR (terminal / komut satiri):
+   dotnet run --project "01-IkiSayiToplama"
+
+ Her Program.cs dosyasi su yapida:
+   - En ustte   : PROBLEM metni (ne yapacaksin)
+   - Ortada     : calistirilabilir iskelet kod + TODO isaretleri
+   - En altta   : IPUCLARI (cozum degil, sadece yol gosterir)
+
+ ONCE ISLETMESI GEREKENLER:
+   - Calistirdiktan sonra ekran hemen kapanir. Dosyanin en sonuna
+     Console.ReadKey(); ekle. (Ipucu olarak her dosyada yazili.)
+   - TODO satirlarini kendin yazarsan burada cozum yok.
+
+================================================================
+ ALISTIRMALAR
+================================================================
+
+ 01  Iki Sayi Toplama ..................... Kolay
+      int degiskenler, tip donusumu, toplama ve ortalama
+
+ 02  Sayi Karsilastirma ................... Kolay
+      if / else, buyuk - esit - kucuk siralamasi
+
+ 03  Ortalama ve Kurus Kaybi .............. Kolay
+      double bolme, 3.0 ile bolmenin onemi
+
+ 04  Not Harfi ........................... Orta
+      if / else if / else zinciri, gecersiz deger kontrolu
+
+ 05  Sifre Kontrolu ....................... Orta
+      && , || , string.Length , string.Contains
+
+ 06  Artik Yil ........................... Orta
+      % (mod), parantez onceligi, ic ice mantik
+
+ 07  Indirim Kademesi ..................... Orta-Zor
+      Kademeli indirim, aralik kontrolu, yuzde hesabi
+
+ 08  Fatura Kes ........................... Orta-Zor
+      KDV, kosullu ek bedel, kisi basi paylasim
+
+ 09  Girdi Dogrulama ...................... Zor
+      int.TryParse, hatali girdi yakalama, while dongusu
+      (bu tek alistirmada dongu kullanilir)
+
+ 10  Final Sinav ......................... Zor
+      Hepsinin bir arasi: okuma, hesaplama, karar, cikti
+
+================================================================
+ ONERI SIRASI
+================================================================
+
+ Sirayla cozmek en faydalisi. Zorluk arttikca konular bir
+ ustunun uzerine kurulur:
+
+   01 -> 02 -> 03 -> 04 -> 05 -> 06 -> 07 -> 08 -> 09 -> 10
+
+ Zorlanirsan o alistirmaya don, ipuclarini oku, sonra 10'a gec.
+
+================================================================
+ EN COK KARSILASILAN 3 HATA
+================================================================
+
+ 1) Ortalama yanlis cikiyor
+    int / int -> int yapar, ondalik kisi kaybolur.
+    (125 + 50 + 30) / 3   = 68   <- yanlis
+    (125 + 50 + 30) / 3.0 = 68.33 <- dogru
+    Bolme operatorunun sagina 3.0 yaz.
+
+ 2) Metin ile sayiyi birlikte yazdiramiyorum
+    Toplam string degisse hata verir.
+    + ile:  Console.WriteLine("Toplam: " + toplam);
+    $ ile:  Console.WriteLine($"Toplam: {toplam}");   (onerilen)
+
+ 3) if / else if zinciri calismiyor
+    Kosullari genisten daraya yaz. Once not >= 60 kontrol
+    edersen, 85 notu AA veya BA kontrolune hic gelmez.
+
+================================================================

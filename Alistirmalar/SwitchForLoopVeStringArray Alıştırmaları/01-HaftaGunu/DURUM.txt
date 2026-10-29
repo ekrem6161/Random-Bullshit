@@ -1,0 +1,15 @@
+ALIŞTIRMA 01 - Hafta Günü
+
+Durum: [ ] Başlanmadı   [ ] Devam ediyor   [ ] Bitti
+
+Kontrol listesi:
+[ ] Proje hatasız derleniyor.
+[ ] Örnek giriş 3 için "Çarşamba / Hafta içi" çıktısı alınıyor.
+[ ] Örnek giriş 6 için "Cumartesi / Hafta sonu" çıktısı alınıyor.
+[ ] 1-7 dışındaki girişlerde uyarı çıkıyor.
+[ ] Sayı olmayan girişlerde program çökmüyor.
+[ ] Gün adları switch-case ile bulunuyor.
+[ ] TODO'ların hepsi dolduruldu.
+
+Notlar:
+-
