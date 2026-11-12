@@ -43,15 +43,52 @@
  ============================================================
 */
 
+int gun = 0;
+bool haftasonu = false;
 Console.Write("Gün numarası (1-7): ");
 string girdi = Console.ReadLine() ?? "";
 
-if (!int.TryParse(girdi, out int gun) || gun < 1 || gun > 7)
+if (!int.TryParse(girdi, out gun) || gun < 1 || gun > 7)
 {
     Console.WriteLine("Geçersiz gün numarası! 1-7 arasında bir sayı girin.");
     return;
 }
+switch (gun)
+{
+    case 1: Console.WriteLine("Gün   : Pazartesi");
+    break;
 
+    case 2: Console.WriteLine("Gün   : Salı");
+    break;
+
+    case 3: Console.WriteLine("Gün   : Çarşamba");
+    break;
+
+    case 4: Console.WriteLine("Gün   : Perşembe");
+    break;
+
+    case 5: Console.WriteLine("Gün   : Cuma");
+    break;
+
+    case 6: Console.WriteLine("Gün   : Cumartesi"); 
+    haftasonu = true;
+    break;
+
+    case 7: Console.WriteLine("Gün   : Pazar");
+    haftasonu = true;
+    break;
+    
+    default : Console.WriteLine("Geçersiz giriş");
+    break;
+}      
+if (haftasonu == true)
+{
+    Console.WriteLine("Gün türü : Hafta sonu");
+}
+else
+{
+    Console.WriteLine("Gün türü : Hafta içi");
+}
 // TODO 1) switch (gun) yaz.
 // TODO 2) Her case için gün adını bir değişkene ata
 //         veya doğrudan Console.WriteLine ile yazdır.
